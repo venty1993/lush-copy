@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slide-container {
+            width: 100%;
+            overflow: hidden; 
+            /* lush-story */
+        }
+
+        .move-rect {
+            width: 500vw;
+            height: 100vh;
+            background-image: linear-gradient(90deg,#fff,#000);
+            cursor: pointer;
+            border: 10px solid black;
+            box-sizing: border-box;
+            /* we-believe */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container lush-story"> 
+        <div class="move-rect we-believe"></div>
+    </div>
+    <script>
+        const rect = document.getElementsByClassName('move-rect')[0];
+
+            rect.addEventListener('mousedown', (e) =>{
+                const rectLocation = rect.getBoundingClientRect();
+                const startX = e.clientX
+                document.addEventListener('mousemove',dragThings)
+                document.addEventListener('mouseup', ()=>{
+                    document.removeEventListener('mousemove', dragThings)
+                })
+
+                function dragThings(event) {
+                    const nowX = event.pageX
+                    
+                    if(rectLocation.x+nowX-startX>0){
+                        rect.style.transform = `translateX(0px)`
+                    }else{
+                        rect.style.transform = `translateX(${rectLocation.x+nowX-startX}px)`
+                    }
+                }
+            })
+    </script>
+</body>
+</html>

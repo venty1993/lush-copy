@@ -1,0 +1,1585 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap'); */
+
+:root{
+    --black:#222222;
+    --black2:#434343;
+    --black3:#767676;
+    --black4:#9F9F9F;
+    --green:#009E25;
+    --green2:#14AD2E;
+    --green3:#48B950;
+    --green4:#6DC670;
+    --purple:#7B1FA2;
+    --white:#FEFEFD;
+
+
+}
+
+/* html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} */
+
+header{
+    width: 100%;
+    position: relative;
+    /* margin: 20px 0; */
+    padding: 20px 20px;
+    /* 마진에 색을 넣으려면 안돼서 패딩으로 했는데
+    마진에 색넣는 법?*/
+    position: fixed;
+    /* fixed하면 space between이 안돼요ㅜㅜ */
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px,1px,1px,1px);
+    overflow: hidden;
+}
+
+.logo-container{
+    position: relative;
+    width: 80px;
+    height: 20px;
+}
+
+.logo-container a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+}
+
+.header-icon{
+    display: flex;
+}
+
+.header-icon li{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.video-container{
+    /* max-width: 100%; */
+    /* width: 100vw; */
+    height: 100vh;
+    position: relative;
+}
+
+video{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    /* 동영상 로드가 오래걸려요ㅜㅜ 깃허브 push도 안돼서 그냥 지웠어요
+    git lfs를 이용하라는대 무슨 말인지... 파일이 200mb넘어서 큰가봐요..?
+     이건 어떻게  해결할까요! 참고로 30초로 잘랐어요ㅜㅜ 
+     */
+     display: block;
+     object-fit: cover;
+}
+
+/* https://homnay.tistory.com/10 */
+
+.video-letter svg{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22vw;
+    max-height: 100%;
+    margin: 0 auto;
+    transform: translate(-50%,-50%);
+}
+
+section{
+    max-width: 100%;
+    margin: 0 auto;
+    /* width: 1220px; */
+    /* padding: 0 350px; */
+    /* margin: 0 350px; 마진에 색을 못넣겠어유ㅠㅠ */
+    /* 어떻게 해야할지 모르겟ㅆ어요
+    1920 1080에만 맞췄더니
+    조금이라도 화면 줄면 박살나요 
+    특히 이벤트는 1440만되도 박살나는데
+    반응형을 이때부터 해줘도 되나요*/
+
+}
+
+.best-seller{
+    background-color: #f5f5f7;
+    padding-bottom: 100px;
+
+}
+
+.best-wrapper{
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.br-hidden{
+    display: none;
+}
+
+h2{
+    font-family: 'Noto Sans kR', sans-serif;
+    font-size: 94px;
+    font-weight: 900;
+    color: var(--green);
+    /* margin-top: 200px; */
+    padding-top: 200px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+.product-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 250px;
+    gap: 80px;
+}
+
+
+.product-text-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    /* flex-basis: 30%; */
+    color: var(--black2);
+    
+}
+
+h3{
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.type{
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.product-description{
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 48px;
+}
+
+.more-black{
+    width: 186px;
+    height: 58px;
+    border-radius: 93px;
+    border: none;
+    background-color: var(--black);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+    /* margin: 0 auto; */
+}
+
+.more-black:hover{
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.4);
+}
+
+.product-img{
+    /* flex-basis: 70%; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.a-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+/* a태그에 보더레디우스 괜찮은가요? */
+/* 아니면 position relative를 circle에는 못주겠죠? 부모가 아니라 자식이니까? */
+}
+
+.circle{
+    width: 600px;
+    height: 600px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 13px 13px 14px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+
+.product-img:hover .circle>*{
+    transform: scale(1.03);
+}
+/* circle을 호버하면 스케일 커지게 하고싶은데 z-index때문에 안돼요ㅜㅜ */
+
+/* .a-link:hover .circle{
+    transform: scale(1.03);
+} */
+
+.black{
+    background-color: rgba(34,34,34,0.9);
+    /* position: relative; */
+}
+
+.orange-pro{
+    width: 350px;
+    height: 335px;
+    margin: 0 auto;
+    transition: 0.5s;
+    /* position: relative; */
+
+}
+
+.orange-tex{
+    width: 341px;
+    height: 305px;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    z-index: -1;
+    transition: 0.5s;
+    /* z-index로 위치 주는 법 말고는 없을까요 검정 원에도 z-index를 줘서
+    겨우 맞췄어요ㅜㅜ 
+    결국 z-index말고 relative를 제품사진 orange-pro에 줘서
+     했는데 hover에 문제가 있네요
+     그리고 orange-tex와 orange-pro는 서로 형제인데도 position relative와 absolute가 되는건가요?*/
+}
+
+.green{
+    background-color: rgba(0,158,37,0.9);
+    /* 배경색만 오퍼시티 주고싶은데 rgba말고 16진수로는 표현 못하나요 */
+}
+.mask-tex{
+    position: absolute;
+    width: 354px;
+    height: 343px;
+    top: -3%;
+    right: 50%;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.mask-pro{
+    width: 337px;
+    height: 390px;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.purple{
+    background-color: rgba(123, 31, 162, 0.9);
+}
+
+.sleepy-pro{
+    margin: 0 auto;
+    width: 201px;
+    height: 425px;
+    transition: 0.5s;
+    /* 왜 여기 relative를 주면 
+    sleepy-tex가 sleepy-pro뒤로 갈까요 */
+}
+
+.sleepy-tex{
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    z-index: -1;
+    transition: 0.5s;
+    width: 300px;
+/* left를 700px하면 마치 뒤로 멀어지듯
+크기가 작아져는데 왜죠? */
+}
+
+.lush-event h2{
+    color: var(--purple);
+    background-color: var(--white);
+
+}
+
+
+
+.section-inner-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.event-img-container{
+    width: 50%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.event-img{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    min-height: 20vh;
+    overflow: hidden;
+    background-size: cover;
+    transition: 0.3s;
+    
+}
+
+.festa-img{
+    background-image: url(../image/festa-bac.png);
+    background-position: center;
+}
+
+.move-wrapper{
+    display: flex;
+    position: absolute;
+    right: 10%;
+    top: 70%;
+    /* transform: translate(410px,600px); */
+    letter-spacing: 1.5em;
+    /* festa 글씨 위치를 어떻게 줘야할지
+    각각 f e s t a 를 absolute해서 줘야할까요
+    반응형 크기에 따라 글씨 위치 달라져요 */
+}
+
+.festa-move{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 8vw;
+    color: var(--white);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.25);
+    
+}
+
+.word-motion1{
+    animation: festa-move 2s infinite alternate;
+
+}
+
+.word-motion2{
+    animation: festa-move 2s infinite alternate-reverse;
+
+}
+
+
+
+
+
+
+@keyframes festa-move {
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(20px);
+    }
+}
+
+.summer-product{
+    position: relative;
+    height: 100vh;
+}
+
+.summer-img{
+    background-image: url(../image/summer-bac.png);
+    background-position: left;
+    /* event1번과 event2번 이미지 사이에 흰색 줄같은 여백 없애는 방법 */
+}
+
+.salty{
+    position: absolute;
+    width: 37%;
+    right: 34%;
+    top: 23%;
+    /* animation: summer-move 3s alternate; */
+    transition: 1s;
+}
+
+
+.dirty{
+    position: absolute;
+    width: 42%;
+    right: 0%;
+    top: 39%;
+    /* animation: summer-move 3s alternate; */
+    transition: 1s;
+}
+
+
+.summer-move{
+    animation: summer-move 3s infinite alternate;
+
+}
+
+@keyframes summer-move {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translatX(100px);
+  
+    }
+}
+
+.fish1{
+    position: absolute;
+    width : 20%;
+    height: 15%;
+    right: 15%;
+    top: 22%;
+}
+
+.fish2{
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    right: 37%;
+    top: 78%;
+
+}
+
+.review-back{
+    background-image: url(../image/review-bac.png);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+.be-the-best{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Noto Sans';
+    font-weight: 900;
+    font-size: 110px;
+    width: 600px;
+
+}
+
+ /* animation: be-the-move 3s alternate; */
+
+
+
+@keyframes be-the-move {
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes best-move {
+    20%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes reviewer-move {
+    40%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+
+
+.be-the-best div:first-child{
+    display: flex;
+}
+
+.be-the div{
+    width: 290px;
+    height: 170px;
+    line-height: 170px;
+}
+
+.be-the{
+    margin-bottom: 23px;
+     animation: be-the-move 5s infinite alternate;
+
+}
+
+.be{
+    background-color: #f5c701;
+    color: #F53F03;
+    margin-right: 20px;
+    
+}
+
+.the{
+    background-color: #0059D7;
+    color: #f5a7d2;
+
+}
+
+.be-the-best p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.best,.reviewer{
+    width: 600px;
+    height: 170px;
+    line-height: 170px;
+}
+
+.best{
+    background-color: #008A3A;
+    color: #F2C801;
+    margin-bottom: 23px;
+    animation: best-move 5s infinite alternate;
+
+}
+
+.reviewer{
+    background-color: #F3A7D8;
+    color: #008A3A;
+    animation: reviewer-move 5s infinite alternate;
+
+}
+
+.download-back{
+    background-image: url(../image/download-bac.png);
+    /* 이미지 보여지는 부분 옮기는거 어떻게 하나요 */
+    background-position: left bottom;
+    position: relative;
+}
+
+.ball-move{
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 40%;
+    animation: festa-move 3s infinite alternate;
+}
+
+
+
+
+
+/* =================text======================== */
+.event-title-wrapper{
+    width: 394px;
+    margin-bottom: 72px;
+}
+
+.small-img-wrapper{
+    display: flex;
+    align-items: center;
+
+}
+
+.small-img-wrapper div{
+    margin-right: 50px;
+}
+
+.small-img-wrapper img{
+    border-radius: 50%;
+}
+
+.small-img-wrapper .small-title{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.event-text{
+    /* height: 200vh; */
+    margin: 50vh 0;
+    padding: 32px;
+    border-radius: 20px;
+    background-color: rgba(254, 254, 253, 0.9);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+
+.event-text .more-black{
+    background-color: var(--black2);
+    margin: 0 auto;
+}
+
+.event-text-wrapper{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.small-title{
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 36px;
+    color: var(--black2);
+ }
+
+ .event-description{
+    font-family: Noto Sans KR;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--black3);
+    letter-spacing: -0.03em;
+    line-height: 35px;
+    margin-bottom: 104px;
+ }
+
+ .event-text .more-black{
+    background-color: var(--black2);
+    margin: 0 auto;
+}
+
+.lush-story{
+    width: 100vw;
+    flex-shrink: 0;
+    overflow: hidden;
+    /* cursor: none; */
+    position: relative;
+}
+
+.cursor-rect{
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    z-index: 5;
+}
+
+.spin{
+    width: 100px;
+    height: 100px;
+    animation: spinspin 10s infinite;
+}
+
+@keyframes spinspin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(350deg);
+    }
+}
+
+.we-believe{
+    display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    background-color: var(--purple);
+    /* transform: translateX(0px);
+    transition: 2s; */
+    position: relative;
+}
+
+.screen-block{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.we-believe-back{
+    height: 100vh;
+    background-image: url(../image/webelieve-back.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 50%;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-color: var(--white);
+    position: relative;
+    z-index: 0;
+}
+
+
+
+.we-believe-back h2{
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    line-height: 150px;
+    font-size: 120px;
+
+
+}
+
+.long-container{
+    background-color: var(--purple);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 160px;
+    min-height: 700px;
+    position: relative;
+    /* z-index: -2; */
+
+}
+
+.line{
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    border-top: 2px solid var(--white);
+    height: 736px;
+    gap: 120px;
+    margin-top: 130px;
+    padding-left: 50px;
+}
+
+.logo-img{
+    width: 272px; 
+    height: 224px;
+    position: absolute;
+    top: -30%;
+    left: -20%;
+}
+
+.opacity-box{
+    position: relative;
+    flex-shrink: 0;
+    width: 596px;
+    height: 475px;
+    background-color: rgba(255,255,255, 0.25);
+    border-radius: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 100px; */
+    gap: 25px;
+    height: 350px;
+}
+
+.bold{
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 100px; */
+    position: relative;
+    z-index: 20;
+    
+}
+
+
+.believe-text{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 141%;
+    color: var(--white);
+    width: 250px;
+}
+
+.fight-text p{
+    margin-bottom: 22px;
+}
+
+.vegan-text p{
+    margin-bottom: 22px;
+}
+
+.handmade-text p{
+    margin-bottom: 22px;
+}
+
+.white{
+    width: 138px;
+    height: 36px;
+    border-radius: 93px;
+    border: none;
+    background-color: var(--white);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--purple);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.white:hover{
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+.spa{
+    /* width: 100%; */
+    /* height: 80vh; */
+    /* overflow: hidden; */
+    background-color: var(--white);
+    padding-top: 20%;
+    box-sizing: border-box;
+    /* min-height: 700px; */
+    position: relative;
+}
+
+.slider{
+    overflow: hidden;
+
+}
+
+.slid-wrapper{
+    transition: 1s;
+}
+
+.spa-container{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    /* transition: 1s; */
+}
+
+.black-container{
+    width: calc(100vw - 17px);
+    /* width: 100vw; */
+    /* height: 80%; */
+    /* padding-top: 20vh; */
+    flex-shrink: 0;
+    bottom: 0;
+    background-color: var(--black);
+    /* transform: translateY(25.1%); */
+    /* padding-top: 20vh; */
+}
+
+
+.spa-buttons{
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    left: 0;
+    height: 50px;
+    z-index: 1;
+}
+
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    transform: translatey(-50%);
+    margin: 0;
+
+}
+
+.arrow img{
+    width: 60px;
+    height: 60px;
+    
+}
+
+
+.arrow-right{
+    right:10px;
+
+}
+
+.arrow-left{
+    left: 10px;
+}
+
+.top-spa{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;   
+    /* transform: translateY(-20%); */
+    max-width: 1220px;
+
+}
+
+.top-spa figure{
+    transform: translateY(-20%);
+}
+
+.top-spa img{
+    width: 90%;
+}
+
+
+.top-spa div{
+    flex-shrink: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--white);
+    text-align: center;
+}
+
+.spa-name{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 34px;
+    
+}
+
+.spa-small-title{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 24px;
+
+}
+
+.tag{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 36px;
+
+}
+
+
+.green-button{
+    width: 180px;
+    height: 48px;
+    border-radius: 93px;
+    border: none;
+    background-color: var(--green);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 48px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.green-button:hover{
+    box-shadow: 4px 5px 6px rgba(110, 110, 110, 0.4);
+    /* transform: scale(1.05); */
+}
+
+.spa-icon{
+    width: 64px;
+    height: 64px;
+}
+
+.bottom-spa{
+    display: flex;
+    max-width: 1220px;
+    margin: 0 auto;
+    justify-content: space-around;
+    /* transform: translateY(-20%); */
+    padding-bottom: 20px;
+
+}
+
+.bottom-spa>div{
+    display: flex;
+}
+
+.spa-des{
+    color: var(--white);
+    font-family: 'Noto Sans KR';
+    margin-left: 26px;
+}
+
+.spa-des-title{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.spa-des-small{
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 7px;
+    line-height: 22px;
+}
+
+footer{
+    background-color: rgba(34, 34, 34, 0.95);
+    padding: 70px 30px;
+
+}
+/* footer위에 흰 선? */
+
+.footer-con{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 70px 0 ;
+    border-top: 2px solid var(--green);
+    border-bottom: 2px solid var(--green);
+    font-family: 'Noto Sans KR';
+}
+
+.logo-white{
+    display: inline-block;
+}
+
+.logo-white figure{
+    width: 84px;
+    height: 38px;
+    margin-bottom: 32px;
+
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.icon-box{
+    display: flex;
+    /* margin-right: 10px; */
+}
+
+.icon-box a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* color: #000000; */
+    flex-grow: 0;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.icon-box figure{
+    width: 32px;
+    height: 32px;
+}
+
+.subscribe{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.subscribe p{
+    padding-bottom: 6px;
+}
+
+.purple-button{
+    width: 82px;
+    height: 23px;
+    border-radius: 93px;
+    border: none;
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 23px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 16px;
+}
+
+.notice{
+    margin-bottom: 16px;
+}
+
+.notice div{
+    display: flex;
+    padding-bottom: 6px;
+}
+
+.notice p:first-of-type{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.under-line{
+    text-decoration: underline;
+}
+
+.notice a{
+    font-weight: 400;
+    font-size: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgba(254, 254, 253, 0.9);
+    display: block;
+}
+
+.right{
+    max-width: 460px;
+}
+
+nav a{
+    margin-right: 36px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--white);
+}
+
+.nav-one{
+    margin-bottom: 6px;
+}
+
+
+.right-top{
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.right-bottom{
+    display: flex;
+    gap: 52px;
+    color: var(--white);
+}
+
+h4{
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.right-bottom p{
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.footer-bottom{
+    font-family: 'Noto Sans KR';
+    max-width: 1220px;
+    margin: 0 auto;
+    padding-top: 30px;
+    color: var(--white);
+    font-size: 10px;
+}
+
+.adress{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.copyright{
+    font-weight: 700;
+    padding-bottom: 100px;
+}
+/* ===================sticky 부분 1920 1080이상해요 */
+/* 위아래로 화면이 작아지면 푸터가 넘쳐서 위에랑 겹쳐요 */
+
+
+@media screen and (max-width:1240px){
+    .video-letter svg{
+        width: 25vw;
+    }
+
+    .best-seller{
+        padding: 0 32px;
+        padding-bottom: 100px;
+
+    }
+
+    .best-wrapper{
+        width: fit-content;
+    }
+
+    .product-wrapper{
+        flex-direction: column-reverse;
+        
+    }
+    
+
+    .product-text-container{
+        align-items: center;
+        text-align: center;
+    }
+
+    /* ====== */
+
+    .event-img-container{
+        width: 100%;
+    }
+    
+    .section-inner-container{
+        display: block;
+    }
+    
+    .event-text-wrapper{
+        width: 100%;
+        position: relative;
+        background-color: transparent;
+    }
+
+
+    .small-img-wrapper div{
+        margin-right: 20px;
+    }
+
+
+    .we-believe{
+        display: flex;
+        flex-wrap: wrap;
+        /* width: max-content; */
+        background-color: var(--purple);
+        /* transform: translateX(0px);
+        transition: 2s; */
+        flex-direction: column;
+    }
+
+    /* .we-believe-back{
+        /* width: 100%; */
+        /* right: 0; */
+    
+
+    .long-container{
+        height: 100%;
+        display: block;
+        padding-bottom: 150px;
+        /* width: 100%; */
+        padding: 0 120px;
+    }
+
+    .line{
+        flex-direction: column;
+        height: 100%;
+        padding: 150px 0;
+        border-bottom: 2px solid var(--white);
+        margin-bottom: 150px;
+    }
+
+    .white{
+        height: 39px;
+    }
+
+    /* ============ */
+
+    .black-container{
+        width: 100vw;
+    }
+
+    .top-spa{
+        flex-direction: column;
+    }
+    
+    .top-spa img{
+        width: 70%;
+        margin: 0 auto;
+
+    }
+
+    .spa-name-container{
+        display: flex;
+        align-items: center;
+        /* margin-top: 48px; */
+        gap: 30px;
+
+    }
+
+    .bottom-spa{
+        flex-direction: column;
+        width: 500px;
+        padding-top: 76px;
+        gap: 40px;
+        /* display: inline-; */
+    }
+
+    .footer-top{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cursor-rect{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:860px) {
+    .we-believe-back h2{
+        font-size: 60px;
+        padding: 0 16px;
+        line-height: 120px;
+        width: 300px;
+    }
+
+    .long-container{
+        padding: 0 16px;
+        margin-bottom: 100px;
+    }
+
+    .line{
+        width: 500px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    .top{
+        flex-direction: column;
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .opacity-box{
+        width: 500px;
+        height: max-content;
+        margin: 0;
+    }
+
+    .button-wrapper{
+        padding: 20px 0;
+    }
+
+    .logo-img{
+        width: 50%;
+        height: 50%;
+        top: -10%;
+        left: -14%;
+    }
+    .black-container{
+        width: 100vw;
+    }
+}
+
+
+/* 뉴모피즘 */
+
+@media screen and (max-width:599px){
+    section{
+        margin: 0;
+    }
+    .video-letter svg{
+        width: 30vw;
+    }
+    
+    .best-seller{
+        padding: 0 16px;
+        padding-bottom: 50px;
+
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    .br-hidden{
+        display: block;
+    }
+
+    .circle{
+        width: 300px;
+        height: 300px;
+    }
+
+    .orange-pro{
+        width: 70%;
+        height: 70%;
+    }
+
+    .orange-tex{
+        width: 60%;
+        height: 55%;
+        left: 40%;
+    }
+
+    .product-name{
+        font-size: 40px;
+    }
+
+    .type{
+        font-size: 24px;
+
+    }
+
+    .product-description{
+        font-size: 16px;
+
+    }
+
+    .mask-tex{
+        width: 55%;
+        height: 70%;
+    }
+
+    .mask-pro{
+        width: 70%;
+        height: 70%;
+    }
+
+    .sleepy-tex{
+        width: 55%;
+        height: auto;
+        left: 45%;
+    }
+
+    .sleepy-pro{
+        width: 40%;
+        height: 88%;
+    }
+
+    .event-text{
+        width: 300px;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .event-title-wrapper{
+        margin: 0 auto;
+        width: 250px;
+        margin-bottom: 17px;
+    }
+
+    .event-title-wrapper svg{
+        width: 250px;
+        height: 50px;
+    }
+
+    .small-title{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 17px;
+
+    }
+
+    .event-description{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 17px;
+
+    }
+
+    .small-img-wrapper div{
+        margin-right: 0;
+    }
+
+    .fish1{
+        right: 42%;
+        top: 9%;
+    }
+
+    .fish2{
+        right: 72%;
+        top: 72%;
+    }
+
+    .line{
+        width: 328px;
+        margin: 0 auto;
+    }
+
+    .opacity-box{
+        width: 300px;
+    }
+
+    .black-container{
+        width: 100vw;
+    }
+    .top-spa img{
+        width: 85%;
+    }
+
+    .spa-name-container{
+        flex-direction: column;
+    }
+
+    .spa-name{
+        font-size: 24px;
+    }
+
+    .spa-small-title{
+        font-size: 16px;
+
+    }
+
+    .tag{
+        font-size: 14px;
+    }
+
+    .bottom-spa{
+        width: 300px;
+        margin: 0 16px;
+    }
+
+    .bottom-spa > div{
+        width: 300px;
+    }
+
+    .spa-icon{
+        width: 28px;
+        height: 28px;
+    }
+
+    .spa-des-title{
+        font-size: 16px;
+    }
+
+    .spa-des-small{
+        font-size: 14px;
+    }
+
+    footer{
+        padding: 70px 16px;
+    }
+
+    .subscribe p{
+        font-size: 10px;
+    }
+
+    .notice a{
+        font-size: 9px;
+    }
+}
